@@ -1,4 +1,9 @@
 export function luhnAlgorithm(cardNumber) {
+  // Проверка наличия значений в карте
+  if (!cardNumber) {
+    return false;
+  }
+
   const digits = cardNumber.toString().split("").map(Number);
   let checksum = 0;
   for (let i = digits.length - 2; i >= 0; i -= 2) {

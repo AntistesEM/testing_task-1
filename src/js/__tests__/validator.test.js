@@ -7,7 +7,7 @@ test.each([
   ["true", "6011607260779752", true],
   ["false", "75464576h64999", false],
   ["false", "4254677678", false],
-  ["false", "012345000000000", false],
+  ["false", "12345000000000", false],
 ])("Должно быть %s", (s, value, expected) => {
   expect(luhnAlgorithm(value)).toBe(expected);
 });

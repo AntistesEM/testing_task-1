@@ -1,13 +1,13 @@
-// import { PaySystem } from "../DetectCardType";
+import { checkPaySystem } from "../DetectCardType";
 
-// test.each([
-//   ["VISA", "4539507425745490", true],
-//   ["MasterCard", "5197901455490400", true],
-//   ["JCB", "3589809069902184", true],
-//   ["Diners Club", "30227772333681", false],
-//   ["American Express", "375453011443981", false],
-//   ["American Express", "340739937162784", false],
-//   ["Discover", "6011330083101399", false],
-// ])("Должно быть %s", (s, value, expected) => {
-//   expect(PaySystem(value)).toBe(expected);
-// });
+test.each([
+  ["VISA", "4539507425745490", "visa"],
+  ["MasterCard", "5197901455490400", "mastercard"],
+  ["JCB", "3589809069902184", "jcb"],
+  ["Diners Club", "30227772333681", "diners"],
+  ["American Express", "375453011443981", "americanexpress"],
+  ["American Express", "340739937162784", "americanexpress"],
+  ["Discover", "6011330083101399", "discover"],
+])("Должно быть %s", (s, value, expected) => {
+  expect(checkPaySystem(value)).toBe(expected);
+});

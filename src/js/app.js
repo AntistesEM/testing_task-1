@@ -1,7 +1,7 @@
 import { PaySystem } from "./DetectCardType";
 import { luhnAlgorithm } from "./Validator";
 
-PaySystem();
+document.querySelector("input").addEventListener("change", PaySystem());
 
 document.querySelector("button").addEventListener("click", function (event) {
   event.preventDefault();
