@@ -9,5 +9,5 @@ test.each([
   ["American Express", "340739937162784", "americanexpress"],
   ["Discover", "6011330083101399", "discover"],
 ])("Должно быть %s", (s, value, expected) => {
-  expect(checkPaySystem(value)).toBe(expected);
+  expect(checkPaySystem(value)[0]).toBe(expected);
 });

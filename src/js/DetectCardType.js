@@ -40,8 +40,10 @@ export function checkPaySystem(inputValue) {
 
   if (result !== null) {
     result.forEach((className) => {
-      const icon = document.querySelector(`.${className}`);
-      icon.classList.remove("disabled");
+      const icon = document.getElementsByClassName(className);
+      if (icon.classList) {
+        icon.classList.remove("disabled");
+      }
     });
   }
 
