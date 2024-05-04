@@ -1,3 +1,5 @@
+![CI](https://github.com/AntistesEM/testing_task-1/actions/workflows/web.yml/badge.svg)
+
 # Домашнее задание к занятию "4.Организация тестирования"
 
 Правила сдачи задания:
